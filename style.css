@@ -1,0 +1,595 @@
+body {
+  width: 1440px;
+  height: 800px;
+  position: relative;
+  overflow-x: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Inter", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.mask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+}
+
+#day {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top -100px right 0 bottom 0;
+}
+
+#night {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.visible {
+  display: flex;
+}
+
+#night img {
+  width: 100%;
+  height: 100%;
+}
+#quotes {
+  z-index: 3;
+  padding: 1rem;
+  position: absolute;
+  width: 573px;
+  height: 125px;
+  left: 165px;
+  top: 56px;
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+#shape {
+  z-index: 2;
+  position: absolute;
+  width: 16.67px;
+  height: 16.67px;
+  left: 730.67px;
+  top: 80.67px;
+}
+
+#shape img {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}
+
+#quote-p {
+  font-family: "Inter";
+  font-style: normal;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  /* or 156% */
+}
+.visiblee {
+  display: flex;
+}
+.up {
+  top: 56px;
+}
+#time {
+  position: absolute;
+  width: 1110px;
+  z-index: 2;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 288px;
+  display: flex;
+  left: 165px;
+}
+.down {
+  top: 355px;
+}
+
+#time-zone {
+  display: flex;
+  position: absolute;
+  width: 300px;
+  flex-direction: column;
+  height: 288px;
+}
+
+#good-morning {
+  display: flex;
+  align-items: center;
+}
+
+#good-morning p {
+  color: white;
+  margin-left: 1rem;
+}
+
+#good-morning img {
+  width: 20px;
+  height: 20px;
+}
+
+#bold-time {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 200px;
+  line-height: 200px;
+  /* identical to box height, or 100% */
+
+  letter-spacing: -5px;
+
+  color: #ffffff;
+}
+
+#bold-zone {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 40px;
+  line-height: 28px;
+  right: -60%;
+  color: white;
+}
+
+#location {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 0.3rem;
+}
+.bright {
+  background-image: url(./assets/desktop/bg-image-daytime.jpg);
+}
+
+#more {
+  width: 146px;
+  display: flex;
+  height: 56px;
+  left: 820px;
+  border: none;
+  border-radius: 40px;
+  align-items: center;
+  background-color: white;
+  top: 190px;
+  position: absolute;
+  cursor: pointer;
+}
+.dark {
+  background-image: url(./assets/desktop/bg-image-nighttime.jpg);
+}
+
+#more #img1 {
+  width: 15px;
+  height: 10px;
+}
+#more p {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 28px;
+  /* identical to box height, or 175% */
+
+  align-items: flex-end;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  margin-left: 1rem;
+}
+
+#img2 {
+  margin-left: 1rem;
+  position: absolute;
+}
+#more-but {
+  margin-left: 1rem;
+  width: 38px;
+  height: 38px;
+  padding: 1rem;
+
+  align-items: center;
+  justify-content: center;
+  border-radius: 90px;
+  border: none;
+  background: #303030;
+}
+
+#detailed-info {
+  height: 50%;
+}
+.whitee {
+  color: white;
+}
+.white {
+  background-color: white;
+}
+.black {
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(40.7742px);
+}
+#detailed-info {
+  height: 420px;
+  width: 1440px;
+  position: absolute;
+
+  backdrop-filter: blur(40.7742px);
+  top: 400px;
+  z-index: 3;
+}
+
+.hidden {
+  display: none;
+}
+
+#info {
+  position: absolute;
+  width: 844px;
+  height: 252px;
+  left: 120px;
+  top: 74px;
+}
+
+#info-region {
+  width: 423px;
+  height: 105px;
+  left: 120px;
+  top: 74px;
+  position: absolute;
+}
+#info h5 {
+  letter-spacing: 0.3rem;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 28px;
+  /* identical to box height, or 187% */
+
+  display: flex;
+  align-items: flex-end;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+#info-day {
+  width: 176px;
+  height: 105px;
+  left: 120px;
+  top: 221px;
+  position: absolute;
+}
+
+#detailed-timezone {
+  height: 68px;
+  left: 0%;
+  right: 38.07%;
+  top: calc(50% - 68px / 2 + 18.5px);
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 68px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: flex-end;
+
+  color: #303030;
+}
+#timeeer {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 68px;
+  /* identical to box height */
+  text-transform: uppercase;
+  display: flex;
+  align-items: flex-end;
+}
+#line {
+  position: absolute;
+  width: 1px;
+  height: 252px;
+  left: 600px;
+  top: 40px;
+  background: #303030;
+  mix-blend-mode: normal;
+  opacity: 0.25;
+}
+
+#info-week {
+  position: absolute;
+  width: 179px;
+  height: 105px;
+  left: 740px;
+  top: 74px;
+}
+
+#info-number {
+  width: 144px;
+  height: 105px;
+  left: 740px;
+  top: 221px;
+  position: absolute;
+}
+
+@media only screen and (max-width: 391px) {
+  body {
+    width: 391px;
+    height: 667px;
+    left: 0px;
+    top: 0px;
+  }
+
+  #quotes {
+    position: absolute;
+    width: 324px;
+    height: 97px;
+    left: 26px;
+    top: 31.67px;
+  }
+  #day {
+    background-size: cover;
+  }
+  #quote-p {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 22px;
+    /* or 183% */
+
+    display: flex;
+    align-items: flex-end;
+
+    color: #ffffff;
+  }
+  .bright {
+    background-image: url(./assets/mobile/bg-image-daytime.jpg);
+  }
+  .dark {
+    background-image: url(./assets/mobile/bg-image-nighttime.jpg);
+  }
+  #time {
+    position: absolute;
+    width: 278px;
+    height: 185px;
+    left: 26px;
+  }
+
+  #TIMER {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 100px;
+    position: absolute;
+    line-height: 100px;
+    /* identical to box height, or 100% */
+    height: 100px;
+    left: 0%;
+    right: -60%;
+    top: calc(50% - 100px / 2 - 1.5px);
+    display: flex;
+    align-items: flex-end;
+
+    color: #ffffff;
+  }
+  #bold-time {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 100px;
+    line-height: 100px;
+    /* identical to box height, or 100% */
+
+    display: flex;
+    align-items: flex-end;
+    letter-spacing: -2.5px;
+
+    color: #ffffff;
+  }
+  #good-morning {
+    position: absolute;
+    left: 0%;
+    right: 28.78%;
+    top: 0%;
+    bottom: 56.49%;
+  }
+  #good {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+    /* identical to box height, or 167% */
+
+    display: flex;
+    align-items: flex-end;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    color: #ffffff;
+  }
+  #good-morning {
+    width: 300px;
+  }
+  #bold-zone {
+    position: absolute;
+    height: 28px;
+    left: 55.57%;
+    right: 0%;
+    top: calc(50% - 28px / 2 + 29.5px);
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 28px;
+    /* identical to box height, or 187% */
+
+    display: flex;
+
+    text-transform: uppercase;
+
+    color: #ffffff;
+  }
+  #city {
+    position: absolute;
+    height: 28px;
+    left: 0%;
+
+    top: calc(50% - 28px / 2 + 78.5px);
+
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 28px;
+    /* identical to box height, or 187% */
+
+    display: flex;
+    align-items: flex-end;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    color: #ffffff;
+  }
+  #location {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 28px;
+  }
+  #more {
+    position: absolute;
+    width: 135px;
+    height: 39px;
+    left: 2px;
+    top: 250px;
+  }
+  #more-but {
+    width: 32px;
+    height: 32px;
+    top: 3px;
+  }
+  #text-more {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+    /* identical to box height, or 117% */
+
+    letter-spacing: 3.75px;
+    text-transform: uppercase;
+
+    color: #000000;
+
+    mix-blend-mode: normal;
+    opacity: 0.5;
+  }
+  #detailed-info {
+    width: 391px;
+    position: absolute;
+    height: 256px;
+    left: 0px;
+    top: 411px;
+  }
+  .up {
+    top: 20px;
+  }
+  .hidden {
+    display: none;
+  }
+  #info {
+    position: absolute;
+    width: 350px;
+    height: 160px;
+    left: 26px;
+    top: 50px;
+  }
+  #info-region {
+    width: 340px;
+    height: 28px;
+    justify-content: space-between;
+    top: 20px;
+    display: flex;
+    align-items: center;
+    left: 10px;
+  }
+  #info h5 {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 28px;
+  }
+  #timeeer {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+  }
+  #info-day {
+    width: 340px;
+    height: 28px;
+    justify-content: space-between;
+    top: 62px;
+    display: flex;
+    align-items: center;
+    left: 10px;
+  }
+  #info-week {
+    width: 340px;
+    height: 28px;
+    justify-content: space-between;
+    top: 102px;
+    display: flex;
+    align-items: center;
+    left: 10px;
+  }
+  #info-number {
+    width: 340px;
+    height: 28px;
+    justify-content: space-between;
+    top: 144px;
+    display: flex;
+    align-items: center;
+    left: 10px;
+  }
+  #img2 {
+    height: 32px;
+    width: 32;
+    top: 3px;
+    left: 25px;
+    left: 80px;
+  }
+  .mask {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+  }
+}
