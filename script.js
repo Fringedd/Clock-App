@@ -20,7 +20,7 @@ fetch("http://worldtimeapi.org/api/ip/")
       document.getElementById("info-number").classList.add("whitee");
       document.getElementById(
         "good-morning"
-      ).innerHTML = `<img id="img-visibleTwo" class="hidden" src="./assets/desktop/icon-moon.svg" alt="" /> <p>GOOD EVENING, IT'S CURRENTLY</p`;
+      ).innerHTML = `<img id="img-visibleTwo" class="hidden" src="icon-moon.svg" alt="" /> <p>GOOD EVENING, IT'S CURRENTLY</p`;
       document.getElementById("img-visible").classList.remove("visible");
       document.getElementById("img-visible").classList.add("hidden");
       document.getElementById("good").classList.remove("visible");
