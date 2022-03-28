@@ -104,7 +104,7 @@ body {
 #time-zone {
   display: flex;
   position: absolute;
-  width: 300px;
+  width: 575px;
   flex-direction: column;
   height: 288px;
 }
@@ -198,6 +198,7 @@ body {
 
 #img2 {
   margin-left: 1rem;
+  left: 80px;
   position: absolute;
 }
 #more-but {
@@ -591,5 +592,8 @@ body {
     height: 100%;
     z-index: 1;
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+  }
+  #time-zone {
+    width: 300px;
   }
 }
