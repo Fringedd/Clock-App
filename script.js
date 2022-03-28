@@ -1,8 +1,8 @@
 "use strict";
 
 fetch("http://worldtimeapi.org/api/ip/")
-  .then((response) => response.json())
-  .then((data) => {
+  .then(response => response.json())
+  .then(data => {
     let time = data.datetime.slice(11, 16);
     let realTime = parseInt(time);
     if (realTime >= 18) {
@@ -29,14 +29,14 @@ fetch("http://worldtimeapi.org/api/ip/")
   });
 
 fetch("https://programming-quotes-api.herokuapp.com/quotes/random")
-  .then((response) => response.json())
-  .then((data) => {
+  .then(response => response.json())
+  .then(data => {
     document.getElementById("quotes").innerHTML = `<p id="quote-p">${data.en}`;
   });
 function quotes() {
   fetch("https://programming-quotes-api.herokuapp.com/quotes/random")
-    .then((response) => response.json())
-    .then((data) => {
+    .then(response => response.json())
+    .then(data => {
       document.getElementById(
         "quotes"
       ).innerHTML = `<p id="quote-p">${data.en}`;
@@ -47,8 +47,8 @@ document.getElementById("shape").addEventListener("click", quotes);
 
 function dynamic() {
   fetch("http://worldtimeapi.org/api/ip/")
-    .then((response) => response.json())
-    .then((data) => {
+    .then(response => response.json())
+    .then(data => {
       let timerr = data.datetime.slice(11, 16);
 
       document.getElementById(
@@ -62,8 +62,8 @@ setInterval(dynamic, 1000);
 fetch(
   "https://api.freegeoip.app/json/?apikey=2fc33440-aaaf-11ec-888c-c55943537f24"
 )
-  .then((response) => response.json())
-  .then((data) => {
+  .then(response => response.json())
+  .then(data => {
     console.log(data);
     document.getElementById(
       "city"
@@ -115,7 +115,7 @@ function squezee() {
 document.getElementById("more").addEventListener("click", squezee);
 
 fetch("http://worldtimeapi.org/api/ip/")
-  .then((response) => response.json())
+  .then(response => response.json())
   .then(data => {
     document.getElementById(
       "info-region"
