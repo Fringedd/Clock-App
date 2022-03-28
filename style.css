@@ -158,7 +158,7 @@ body {
   letter-spacing: 0.3rem;
 }
 .bright {
-  background-image: url(./assets/desktop/bg-image-daytime.jpg);
+  background-image: url(bg-image-daytime.jpg);
 }
 
 #more {
@@ -175,7 +175,7 @@ body {
   cursor: pointer;
 }
 .dark {
-  background-image: url(./assets/desktop/bg-image-nighttime.jpg);
+  background-image: url(bg-image-nighttime.jpg);
 }
 
 #more #img1 {
@@ -366,10 +366,10 @@ body {
     color: #ffffff;
   }
   .bright {
-    background-image: url(./assets/mobile/bg-image-daytime.jpg);
+    background-image: url(bg-image-daytime.jpg);
   }
   .dark {
-    background-image: url(./assets/mobile/bg-image-nighttime.jpg);
+    background-image: url(bg-image-nighttime.jpg);
   }
   #time {
     position: absolute;
