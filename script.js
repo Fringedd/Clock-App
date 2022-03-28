@@ -116,7 +116,7 @@ document.getElementById("more").addEventListener("click", squezee);
 
 fetch("http://worldtimeapi.org/api/ip/")
   .then((response) => response.json())
-  .then((data) => {
+  .then(data => {
     document.getElementById(
       "info-region"
     ).innerHTML += `<span id="timeeer">${data.timezone}</span>`;
