@@ -1,6 +1,6 @@
 "use strict";
 
-fetch("http://worldtimeapi.org/api/ip/")
+fetch("https://worldtimeapi.org/api/ip/")
   .then(response => response.json())
   .then(data => {
     let time = data.datetime.slice(11, 16);
@@ -46,7 +46,7 @@ function quotes() {
 document.getElementById("shape").addEventListener("click", quotes);
 
 function dynamic() {
-  fetch("http://worldtimeapi.org/api/ip/")
+  fetch("https://worldtimeapi.org/api/ip/")
     .then(response => response.json())
     .then(data => {
       let timerr = data.datetime.slice(11, 16);
@@ -114,7 +114,7 @@ function squezee() {
 
 document.getElementById("more").addEventListener("click", squezee);
 
-fetch("http://worldtimeapi.org/api/ip/")
+fetch("https://worldtimeapi.org/api/ip/")
   .then(response => response.json())
   .then(data => {
     document.getElementById(
